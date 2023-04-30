@@ -1,0 +1,54 @@
+<%-include('components/topBar.ejs')%>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+
+      <form action="/register" method="POST">
+          <!-- Name input -->
+          <div class="form-outline mb-4">
+            <input type="text" class="form-control " placeholder="Name" name="name" />
+          </div>
+
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+              <input type="email" class="form-control " placeholder="Email" name="email" />
+            </div>
+        
+          <!-- Password input -->
+          <div class="form-outline mb-4">
+            <input type="password" class="form-control" placeholder="Password" name="password" />
+          </div>
+
+          <% if(message) { %>
+            <!-- Alert -->
+          <div class="alert alert-danger" role="alert">
+            <%= message%>
+          </div>
+          <% } %>
+
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-primary btn-block mb-4" >Register</button>
+
+      </form>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<%-include('components/footer.ejs')%>

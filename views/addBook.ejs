@@ -1,0 +1,42 @@
+<%-include('components/topBar.ejs')%>
+<br>
+<br>
+<br><br><br><br><br><br><br><br>
+
+<div class="container">
+    <form action="/books/addBook" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <input type="text" class="form-control"  name="title" placeholder="Title">
+          </div>
+
+          <div class="mb-3">
+            <input type="text" class="form-control"  name="author" placeholder="Author Name">
+          </div>
+
+          <div class="mb-3">
+            <textarea class="form-control" placeholder="Book description" name="description" id="floatingTextarea2" style="height: 100px"></textarea>
+          </div>
+
+          <div class="mb-3">
+            <input type="number" class="form-control"  name="price" placeholder="Price">
+          </div>
+
+          <div class="mb-3">
+            <input type="file" name="image" accept=".png,.jpg,.JPEG" class="form-control">
+          </div>
+          <% if(message) { %>
+            <!-- Alert -->
+          <div class="alert alert-danger" role="alert">
+            <%= message%>
+          </div>
+          <% } %>
+
+
+
+        <button type="submit" class="btn btn-primary">Add Book</button>
+      </form>
+</div>
+
+
+
+<%-include('components/footer.ejs')%>

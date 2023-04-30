@@ -1,0 +1,29 @@
+<%-include('components/topBar.ejs')%>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <img src="/uploads/<%=book.image%>" height="500" width="400" alt="images">
+      </div>
+      <div class="col">
+        <h1><%=book.title%></h1>
+        <h4><%=book.author%></h4>
+        <span><%=book.price%> $</span>
+        <p><%=book.description%></p>
+      </div>
+    </div>
+</div>
+
+<%-include('components/footer.ejs')%>

@@ -1,0 +1,54 @@
+<%- include('components/topBar.ejs') %>
+
+
+<div class="page-heading products-heading header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="text-content">
+            <h4>new arrivals</h4>
+            <h2>sixteen products</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="products">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+            <div class="filters-content">
+                <div class="row grid">
+                  <% for (let book of books) { %>
+                  <!-- Book card -->
+                      <div class="col-lg-4 col-md-4 all des">
+                        <div class="product-item">
+                          <a href="/books/<%=book.id%>"><img src="/uploads/<%=book.image%>" height="400" alt="image"></a>
+                          <div class="down-content">
+                            <a href="/books/<%=book.id%>"><h4><%=book.title%></h4></a>
+                            <h6> <%=book.price%> $</h6>
+                            <p><%=book.description%></p>
+                            <button type="button"  class="btn btn-info" style="margin-right: 3.5rem;width: 7rem;"><a href="/books/update/<%=book.id %>" style="color: white;font-size: 22px;">Details</a></button>
+                            <button type="button" class="btn btn-danger" style="width: 7rem;"><a href="/books/delete/<%=book.id %>" style="color: white;font-size: 22px;">Delete</a></button>
+
+                          </div>
+                          
+                        </div>
+                      </div>
+                      <!-- End Card -->
+                      <% } %>
+                </div>
+            </div>
+         </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+<%- include('components/footer.ejs') %> 
